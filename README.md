@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 In shell ,we have multiple shell ,out of that we are going to use BASH.
 
 BASH = SH + KSH +CSH(ON SERVER SIDE BASH IS DEFAULT )
@@ -24,3 +25,7 @@ Topics on shell
          Problem : we need to run only one component in one server
 2. Make Individual Script for each component
          Problem : Making Individual may not make the code DRY(Don't Repeat Yourself)
+=======
+# shell-scripting
+hello
+>>>>>>> 6204baf8a925df4f34f225fd21f7ec48f03efbbe
