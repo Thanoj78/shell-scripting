@@ -52,10 +52,11 @@ b2=(100 100.0 200 abc)
 echo ${b2[0]}
 echo ${b2[1]}
 
-#Named Index , Map , Dicyionary 
+#Named Index , Map , Dicyionary
 declare -A new=( [Class]=DevOps [Name]=Thanoj [timings]=6AM )
-echo ${new[Name]}
-echo ${new[Timings]}
+
 echo ${new[Class]}
+echo ${new[timings]}
+echo ${new[Name]}
    
    
