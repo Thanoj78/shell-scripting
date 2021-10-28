@@ -30,3 +30,6 @@ payment:	##Install Payment
 
 frontend:	##Install Forntend
 	@bash components/frontend.sh
+
+####
+testing
