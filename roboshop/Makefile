@@ -1,5 +1,5 @@
-help:       ## Show this help.
-	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep |
+help:	## Show this help.
+	@fgrep -h "##" $(MAKEFILE_LIST) | grep -v fgrep
 
 catalouge:	##Install Catalouge
 	@bash components/catalouge.sh
