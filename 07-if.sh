@@ -1,12 +1,13 @@
-#!/bin/bash
+##!/bin/bash
 
-read -p 'Enter some input: ' input
-if [ -z "$input" ]; then
-  echo "Hey . You have not provided any input"
-  exit 1
+read -p "Enter some input:" input
+if [ -z "$input"]; then
+echo "Hey . You have not provided any input"
+exit 1
+
 fi
 
-if[ $input == "ABC" ];  then
+if[ $input == "ABC" ]; then
   echo "input you provided is ABC"
 fi
 
@@ -18,7 +19,7 @@ else
  fi
 
 read -p 'Enter filename : ' file
-ifn[-e $file ]; then
+if [ -f $file ]; then
   echo "File Exist"
 else 
   echo "File does not exist"
