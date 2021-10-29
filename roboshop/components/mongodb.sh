@@ -26,3 +26,6 @@
 #cd mongodb-main
 #mongo < catalogue.js >/tmp/log
 #mongo <user.js >/tmp/log
+
+
+echo "this mongodb"
