@@ -12,3 +12,6 @@ systemctl enable mongod
 systemctl start mongod
 
 ########
+
+https  {token}
+ssh   {ssh-keys}
