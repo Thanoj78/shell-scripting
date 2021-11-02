@@ -2,9 +2,8 @@
 
 read -p "Enter some input:" input
 if [ -z "$input"]; then
-echo "Hey . You have not provided any input"
+  echo "Hey . You have not provided any input"
 exit 1
-
 fi
 
 if[ $input == "ABC" ]; then
