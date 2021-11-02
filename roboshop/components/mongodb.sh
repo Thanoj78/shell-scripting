@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "setting up Mongodb Repo"
 
 echo '[mongodb-org-4.2]
