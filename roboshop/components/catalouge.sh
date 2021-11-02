@@ -3,21 +3,21 @@
 source components/common.sh
 
 Print "Installing NodeJS"
- yum install nodejs make gcc-c++ -y &>>$LOG
+yum install nodejs make gcc-c++ -y &>>$LOG
 Status_Check $?
 
 Print "Adding Roboshop User"
- useradd roboshop &>>$LOG
+useradd roboshop &>>$LOG
 Status_Check $?
 
 Print "Downloading Catalouge Content"
- curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>$LOG
+curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>$LOG
 Status_Check $?
 
 Print "Extracting Catalouge"
- cd /home/roboshop
- unzip /tmp/catalogue.zip &>>$LOG
- mv catalogue-main catalogue
+cd /home/roboshop
+unzip /tmp/catalogue.zip &>>$LOG
+mv catalogue-main catalogue
 Status_Check $?
 
 cd /home/roboshop/catalogue
