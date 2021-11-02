@@ -1,5 +1,3 @@
-echo "Installing MongoDB"
-
 echo '[mongodb-org-4.2]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
@@ -11,7 +9,12 @@ yum install -y mongodb-org
 systemctl enable mongod
 systemctl start mongod
 
-########
+systemctl restart mongod
 
-https  {token}
-ssh   {ssh-keys}
+curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
+
+cd /tmp
+unzip mongodb.zip
+cd mongodb-main
+mongo < catalogue.js
+mongo < users.js
