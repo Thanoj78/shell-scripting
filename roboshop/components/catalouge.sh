@@ -2,7 +2,7 @@ yum install nodejs make gcc-c++ -y
 
 useradd roboshop
 
-#curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
+curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
 
 #cd /home/roboshop
 #unzip /tmp/catalogue.zip
