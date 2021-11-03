@@ -10,7 +10,7 @@ mv catalogue-main catalogue
 cd /home/roboshop/catalogue
 npm install
 
-#mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 #systemctl daemon-reload
 #systemctl start catalogue
 #systemctl enable catalogue
