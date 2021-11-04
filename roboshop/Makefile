@@ -1,8 +1,8 @@
 help:	## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | grep -v fgrep
 
-catalouge:	##Install Catalouge
-	@bash components/catalouge.sh
+catalogue:	##Install Catalouge
+	@bash components/catalogue.sh
 
 mongodb:	##Install Mongodb
 	@bash components/mongodb.sh
