@@ -24,7 +24,7 @@ cd /home/roboshop
 rm -rf catalogue && unzip -o /tmp/catalogue.zip &>>LOG && mv catalogue-main catalogue
 Status_Check $?
 
-Print "downloading NodeJS Dependencies"
+Print "Downloading NodeJS Dependencies"
 cd /home/roboshop/catalogue
 npm install --unsafe-perm &>>$LOG
 Status_Check $?
@@ -36,5 +36,5 @@ sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/systemd.se
 Status_Check $?
 
 Print "Setup SystemD Service"
-mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service && systemctl daemon-reload && systemctl start catalogue &>>$LOG && systemctl enable catalogue
+mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service && systemctl daemon-reload && systemctl start catalogue &>>$LOG && systemctl enable catalogue &>>$LOG
 Status_Check $?
