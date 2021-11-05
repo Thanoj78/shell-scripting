@@ -3,25 +3,25 @@
 source components/common.sh
 
 Print "Installing NodeJS"
-yum install nodejs make gcc-c++ -y
+yum install nodejs make gcc-c++ -y &>>$LOG
 Status_Check $?
 
 Print "Adding Roboshop user"
-useradd roboshop
+useradd roboshop &>>$LOG
 Status_Check $?
 
 Print "Downloading catalogue content"
-curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
+curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>$LOG
 Status_Checkc $?
 
 Print "Extracting Catalogue Content"
 cd /home/roboshop
-unzip /tmp/catalogue.zip
+unzip /tmp/catalogue.zip &>>LOG
 mv catalogue-main catalogue
 Status_Check $?
 
 cd /home/roboshop/catalogue
-npm install
+npm install &>>$LOG
 
 # mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 # systemctl daemon-reload
