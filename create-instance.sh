@@ -2,5 +2,12 @@
 
 LID="lt-0495b5dbb849fecb2"
 LVER=2
+INSTANCE_NAME=$1
 
-aws ec2 run-instances --launch-template LaunchTemplateId=$LID,Version=$LVER | jq .Instances[].InstanceId
+if[ -z "${INSTANCE_NAME}" ]; then
+  echo "Input is missing"
+  exit 1
+fi
+
+InstancesID=$(aws ec2 run-instances --launch-template LaunchTemplateId=$LID,Version=$LVER --tag-specifications "ResourceType=spot-instances-request,Tags=[{Key=Name,Value=$INSTANCE_NAME}]" | jq .Instances[].PrivateIpAddress | sed -e 's/"//g')
+
