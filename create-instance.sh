@@ -1,7 +1,6 @@
 #!/bin/bash
 
-LID=lt-0495b5dbb849fecb2
+LID="lt-0495b5dbb849fecb2"
 LVER=2
 
-aws ec2 run-instances
-  --launch-template LaunchTemplateId=$LID,Version=$LVER
+aws ec2 run-instances --launch-template LaunchTemplateId=$LID,Version=$LVER
