@@ -2,7 +2,7 @@
 
 source components/common.sh
 
-Print "setting up Mongodb Repo"
+Prin "setting up Mongodb Repo"
 
 echo '[mongodb-org-4.2]
 name=MongoDB Repository
